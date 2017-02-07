@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 def read_multifasta(file_path):
 
     is_entry = False
@@ -97,7 +99,7 @@ if __name__ == '__main__':
 
     parser = argparse.ArgumentParser(description='Find VSGs in your contig assembly')
 
-    parser.add_argument('-i', '--input', 
+    parser.add_argument('-i', '--input', required = True,
         help = 'Defines the input multi-fasta file.')
 
     parser.add_argument('-b', '--blast', action = 'store_true',
